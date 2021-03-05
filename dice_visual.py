@@ -3,11 +3,11 @@ from plotly import offline
 from plotly.graph_objs import Bar, Layout
 
 
-# Создание кубика D6
+# Create two dice
 die_1 = Die()
 die_2 = Die()
 
-# Model of two dice throws with saving the results it in a list
+# Modeling two dice throws and saving the results in a list
 results = []
 for num in range(1000):
     roll = die_1.roll() + die_2.roll()
