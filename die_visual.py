@@ -3,10 +3,10 @@ from plotly import offline
 from plotly.graph_objs import Bar, Layout
 
 
-# Создание кубика D6
+# Create a die object.
 die = Die()
 
-# Моделирование бросков с сохранением результата в списке
+# Modeling throws and saving its values in a list.
 results = []
 for num in range(1000):
     roll = die.roll()
@@ -18,7 +18,7 @@ frequencies = [results.count(value) for value in range(1, die.num_sides+1)]
 # Data visualisation via plotly.
 x_values = list(range(1, die.num_sides+1))
 
-# List of sides of a die - x axis, frequencies - y axis. Bar - столбцевая диаграмма.
+# List of sides of a die - x axis, frequencies - y axis. Bar - type of diagram.
 data = [Bar(x=x_values, y=frequencies)]
 
 # Name the axises.
